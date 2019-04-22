@@ -1,0 +1,76 @@
+﻿<Page x:Class="WpfApp1.Rules3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800"
+      Title="Rules">
+
+    <Page.Resources>
+        <!-- Button Formatting -->
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="#EA8F8F"/>
+            <Setter Property="Foreground" Value="#444444"/>
+        </Style>
+    </Page.Resources>
+
+    <!-- Background Formatting -->
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#444444" Offset="0"/>
+            <GradientStop Color="#FF00E7FF" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <!-- Grid Definitions -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back Button -->
+        <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="1" Grid.RowSpan="1" Click="backButton_Click"
+                x:Name="backButton" Content="Back" HorizontalAlignment="Center"
+                VerticalAlignment="Center" UseLayoutRounding="False" FontFamily="Arial">
+        </Button>
+
+        <!-- Go to Game Button -->
+        <Button Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="1" Grid.RowSpan="1" Click="playButton_Click"
+                x:Name="playButton" Content="Go to Game" HorizontalAlignment="Center"
+                VerticalAlignment="Center" UseLayoutRounding="False" FontFamily="Arial">
+        </Button>
+
+        <!-- Text -->
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" TextWrapping="Wrap" Text="Rule 3:" VerticalAlignment="Center" Foreground="#FFFFFF" 
+                   FontSize="36" FontWeight="Bold" Margin="45,21,43,27" />
+
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center" TextWrapping="Wrap" Text="Try to beat the computer before it beats you!"
+                   TextAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFFF" 
+                   FontSize="18" Width="551" Height="54" Margin="127,10,122,36" />
+
+        <TextBlock Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center" TextWrapping="Wrap" Text="HAVE FUN!"
+                   TextAlignment="Center" VerticalAlignment="Center" Foreground="#EA8F8F" 
+                   FontSize="72" Width="551" Height="97" Margin="127,37,122,44" FontFamily="Arial Black" />
+        <!-- End text -->
+    </Grid>
+</Page>
